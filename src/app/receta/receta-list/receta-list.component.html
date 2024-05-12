@@ -1,10 +1,14 @@
 <div class="row container-fluid">
 
+    <div class="col" *ngIf="selected">
+        <app-receta-detail [recetaDetail]="selectedReceta"></app-receta-detail>
+    </div>
+
     <p>{{textPromedio}}</p> 
 
     <div  class="col" *ngFor="let receta of recetas">
 
-        <div class="card p-2" style="width: 15rem; height: 33rem">
+        <div class="card p-2" style="width: 15rem; height: 33rem" (click)="onSelected(receta)">
             <h5 class="card-title">{{ receta.nombre }}</h5>
             <img
               class="card-img-top"

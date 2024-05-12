@@ -14,6 +14,9 @@ export class RecetaListComponent implements OnInit{
   textPromedio = "";
   opiniones = 0;
 
+  selected: boolean = false;
+  selectedReceta!: Receta;
+
   constructor(private recetaService: RecetaService) {}
 
   getRecetas(): void {
@@ -32,6 +35,11 @@ export class RecetaListComponent implements OnInit{
       this.textPromedio = "La calificacion promedio es: " + this.calPromedio.toFixed(2) + " con " + this.opiniones + " opiniones."
 
     });
+  }
+
+  onSelected(receta: Receta){
+    this.selected = true;
+    this.selectedReceta = receta;
   }
 
   ngOnInit(): void {
