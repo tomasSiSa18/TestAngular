@@ -1,0 +1,25 @@
+<div class="row container-fluid">
+
+    <p>{{textPromedio}}</p> 
+
+    <div  class="col" *ngFor="let receta of recetas">
+
+        <div class="card p-2" style="width: 15rem; height: 33rem">
+            <h5 class="card-title">{{ receta.nombre }}</h5>
+            <img
+              class="card-img-top"
+              src="{{ receta.imagen }}"
+              alt="{{ receta.nombre }}"
+            />
+            <div class="card-body">
+              <p class="card-text">Calificaion: {{receta.estrellas}} de {{receta.cantidadOpiniones}} opiniones</p>
+              <p class="card-text">Duracion: {{receta.duracion}}</p>
+              <p class="card-text">Dificultad: {{receta.dificultad}}</p>
+              <p class="card-text">Por: {{receta.autorReceta}}</p>
+            </div>
+        </div>
+
+        
+    </div>
+
+</div>
