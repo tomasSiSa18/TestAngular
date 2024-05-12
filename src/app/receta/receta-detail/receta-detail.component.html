@@ -1,1 +1,27 @@
-<p>receta-detail works!</p>
+<div class="row">
+    <div class="col">
+        <img src="{{recetaDetail.imagen}}">
+        <p>Estrellas: {{recetaDetail.estrellas}} | Opiniones: {{recetaDetail.cantidadOpiniones}}</p>
+    </div>
+    <div class="col">
+
+        <dl>
+
+            <dt>Descripcion:</dt>
+            <dd>{{recetaDetail.descripcion}}</dd>
+
+            <dt>Ingredientes</dt>
+            <dd>{{recetaDetail.ingredientes}}</dd> 
+
+            <dt>Autor de la receta</dt>
+            <dd>{{recetaDetail.autorReceta}}</dd>
+
+            <dt>Mas Info</dt>
+            <dd>Dificultad: {{recetaDetail.dificultad}}</dd>
+            <dd>Duracion: {{recetaDetail.duracion}}</dd>
+
+
+        </dl>
+
+    </div>
+</div>
